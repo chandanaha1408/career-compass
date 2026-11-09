@@ -1,0 +1,27 @@
+{% extends "base.html" %}{% block title %}Find jobs you actually fit{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <p class="mark"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14"/><path d="M16 5l4 11-4 11-4-11z"/></svg>Career Compass</p>
+    <h1>See exactly why you fit a job, and what to learn next.</h1>
+    <p class="lede">Upload your resume. We read it with NLP, find live postings that match, explain every requirement line by line, flag fake jobs, and build a free study plan for the roles you want.</p>
+    <p class="cta">{% if g.user %}<a class="btn" href="{{ url_for('main.profile') }}">Go to your profile</a>{% else %}<a class="btn" href="{{ url_for('auth.signup') }}">Create a free account</a> <a class="btn ghost" href="{{ url_for('auth.login') }}">Log in</a>{% endif %}</p>
+    <p class="fine">Runs on your own computer. Your resume never leaves it unless you add an API key for live jobs or AI suggestions.</p>
+  </div>
+  <figure class="demo" aria-label="Example of a match explanation">
+    <figcaption>Data Analyst · InsightCorp <span class="pill">64 · Good match</span></figcaption>
+    <ol class="req">
+      <li class="strong"><span>Strong SQL and Excel skills</span><em>Built sales reports with SQL and Excel pivot tables</em></li>
+      <li class="partial"><span>Dashboards in Power BI or Tableau</span><em>Created charts with matplotlib during internship</em></li>
+      <li class="missing"><span>Statistics knowledge</span><em>Not found in your resume</em></li>
+    </ol>
+    <p class="hint">Learn statistics and 4 more postings become good matches.</p>
+  </figure>
+</section>
+<section class="how">
+  <div><h3>Understands your resume</h3><p>Skills with levels, from where you used them. &ldquo;Currently learning Docker&rdquo; isn't counted as knowing Docker.</p></div>
+  <div><h3>Matches by meaning</h3><p>Sentence embeddings and a cross-encoder compare meaning, not just keywords.</p></div>
+  <div><h3>Keeps you safe</h3><p>Postings asking for fees, OTPs or WhatsApp-only contact are flagged.</p></div>
+  <div><h3>Plans your preparation</h3><p>Readiness score, week-by-week plan and free courses matched to your level.</p></div>
+</section>
+{% endblock %}

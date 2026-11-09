@@ -1,0 +1,621 @@
+{
+ "software-engineer": [
+  {
+   "title": "Library management system",
+   "skills": [
+    "java",
+    "oops",
+    "sql",
+    "git"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "A console or web app to issue and return books, with classes for books and members and a SQL database."
+  },
+  {
+   "title": "DSA visualizer",
+   "skills": [
+    "javascript",
+    "data structures",
+    "algorithms"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Animate sorting, stacks, queues and graph traversals step by step in the browser."
+  }
+ ],
+ "python-developer": [
+  {
+   "title": "Expense tracker REST API",
+   "skills": [
+    "python",
+    "flask",
+    "sql",
+    "rest api",
+    "git"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "CRUD API for expenses with categories and monthly summaries, tested with pytest."
+  },
+  {
+   "title": "URL shortener with Docker",
+   "skills": [
+    "python",
+    "fastapi",
+    "postgresql",
+    "docker"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Shorten links, count clicks and package the service in a Docker container."
+  }
+ ],
+ "java-developer": [
+  {
+   "title": "Student portal with Spring Boot",
+   "skills": [
+    "java",
+    "spring boot",
+    "mysql",
+    "rest api"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "REST API for students, courses and marks with validation and JUnit tests."
+  },
+  {
+   "title": "Bank account microservices",
+   "skills": [
+    "java",
+    "spring boot",
+    "microservices",
+    "junit"
+   ],
+   "difficulty": "Advanced",
+   "weeks": 3,
+   "description": "Two small services (accounts, transactions) talking over REST."
+  }
+ ],
+ "frontend-developer": [
+  {
+   "title": "Personal portfolio site",
+   "skills": [
+    "html",
+    "css",
+    "javascript",
+    "responsive design"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "A responsive portfolio that showcases your projects and works well on phones."
+  },
+  {
+   "title": "Movie search app in React",
+   "skills": [
+    "react",
+    "javascript",
+    "rest api",
+    "css"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Search a public movie API, show details and save favourites."
+  }
+ ],
+ "backend-developer": [
+  {
+   "title": "Blog API with authentication",
+   "skills": [
+    "node.js",
+    "express",
+    "mongodb",
+    "rest api"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Users, posts and comments with JWT login."
+  },
+  {
+   "title": "Real-time chat server",
+   "skills": [
+    "node.js",
+    "javascript",
+    "redis"
+   ],
+   "difficulty": "Advanced",
+   "weeks": 2,
+   "description": "WebSocket chat rooms with message history."
+  }
+ ],
+ "full-stack-developer": [
+  {
+   "title": "Task manager (MERN)",
+   "skills": [
+    "react",
+    "node.js",
+    "express",
+    "mongodb"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 3,
+   "description": "Projects, tasks, due dates and login, deployed online."
+  },
+  {
+   "title": "College event portal",
+   "skills": [
+    "django",
+    "react",
+    "sql",
+    "rest api"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 3,
+   "description": "Students register for events; admins publish and track attendance."
+  }
+ ],
+ "android-developer": [
+  {
+   "title": "Habit tracker app",
+   "skills": [
+    "android",
+    "kotlin",
+    "sqlite"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 2,
+   "description": "Track daily habits with reminders and streaks."
+  },
+  {
+   "title": "News reader with API",
+   "skills": [
+    "android",
+    "kotlin",
+    "rest api",
+    "firebase"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Fetch headlines from a public API and save articles with Firebase."
+  }
+ ],
+ "data-analyst": [
+  {
+   "title": "Sales dashboard",
+   "skills": [
+    "sql",
+    "excel",
+    "power bi",
+    "data visualization"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Analyse a public retail dataset and build an interactive Power BI dashboard."
+  },
+  {
+   "title": "Exploratory analysis report",
+   "skills": [
+    "python",
+    "pandas",
+    "data cleaning",
+    "statistics"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Clean a messy public dataset and write up five clear findings with charts."
+  }
+ ],
+ "data-scientist": [
+  {
+   "title": "House price prediction",
+   "skills": [
+    "python",
+    "pandas",
+    "scikit-learn",
+    "feature engineering"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Compare regression models and explain which features matter most."
+  },
+  {
+   "title": "Customer churn model",
+   "skills": [
+    "python",
+    "machine learning",
+    "xgboost",
+    "statistics"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Predict churn and present business recommendations."
+  }
+ ],
+ "ml-engineer": [
+  {
+   "title": "Deploy an ML model as an API",
+   "skills": [
+    "python",
+    "scikit-learn",
+    "model deployment",
+    "docker"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Train a model, serve predictions with FastAPI and containerise it."
+  },
+  {
+   "title": "Image classifier with transfer learning",
+   "skills": [
+    "pytorch",
+    "deep learning"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Fine-tune a pretrained CNN on a small custom dataset."
+  }
+ ],
+ "nlp-engineer": [
+  {
+   "title": "Fake news classifier",
+   "skills": [
+    "python",
+    "nlp",
+    "scikit-learn"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "TF-IDF and logistic regression baseline, then compare with a transformer."
+  },
+  {
+   "title": "Resume-question chatbot",
+   "skills": [
+    "nlp",
+    "transformers",
+    "llm",
+    "langchain"
+   ],
+   "difficulty": "Advanced",
+   "weeks": 3,
+   "description": "Answer questions about a document using retrieval and an LLM."
+  }
+ ],
+ "computer-vision-engineer": [
+  {
+   "title": "Face mask detector",
+   "skills": [
+    "python",
+    "opencv",
+    "deep learning",
+    "cnn"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Detect faces in webcam video and classify mask/no-mask."
+  },
+  {
+   "title": "Object counting from video",
+   "skills": [
+    "opencv",
+    "pytorch",
+    "computer vision"
+   ],
+   "difficulty": "Advanced",
+   "weeks": 3,
+   "description": "Count vehicles crossing a line in traffic footage."
+  }
+ ],
+ "data-engineer": [
+  {
+   "title": "ETL pipeline with Airflow",
+   "skills": [
+    "python",
+    "sql",
+    "etl",
+    "airflow"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Daily pipeline that pulls public data, cleans it and loads it into a database."
+  },
+  {
+   "title": "Spark log analysis",
+   "skills": [
+    "spark",
+    "pyspark",
+    "data warehousing"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Process large web logs with PySpark and produce summary tables."
+  }
+ ],
+ "business-analyst": [
+  {
+   "title": "Process improvement case study",
+   "skills": [
+    "business analysis",
+    "requirements gathering",
+    "excel"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Map a college process (e.g. admissions), find bottlenecks and propose fixes."
+  },
+  {
+   "title": "KPI dashboard for a startup",
+   "skills": [
+    "sql",
+    "power bi",
+    "data analysis"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 1,
+   "description": "Define KPIs and build a dashboard from sample data."
+  }
+ ],
+ "devops-engineer": [
+  {
+   "title": "CI/CD pipeline for a web app",
+   "skills": [
+    "git",
+    "docker",
+    "ci/cd",
+    "linux"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Automatically test, build and deploy an app on every push using GitHub Actions."
+  },
+  {
+   "title": "Kubernetes deployment",
+   "skills": [
+    "docker",
+    "kubernetes",
+    "prometheus",
+    "grafana"
+   ],
+   "difficulty": "Advanced",
+   "weeks": 2,
+   "description": "Deploy a multi-container app on a local cluster with monitoring."
+  }
+ ],
+ "cloud-engineer": [
+  {
+   "title": "Static website on AWS",
+   "skills": [
+    "aws",
+    "s3",
+    "cloud computing"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Host a website on S3 with a custom domain."
+  },
+  {
+   "title": "Infrastructure as code",
+   "skills": [
+    "terraform",
+    "aws",
+    "ec2",
+    "linux"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Provision a server and network with Terraform."
+  }
+ ],
+ "cybersecurity-analyst": [
+  {
+   "title": "Home lab network analysis",
+   "skills": [
+    "wireshark",
+    "networking",
+    "network security"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Capture and explain traffic on your network; document suspicious patterns."
+  },
+  {
+   "title": "Vulnerability assessment report",
+   "skills": [
+    "kali linux",
+    "penetration testing",
+    "owasp"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Test an intentionally vulnerable app (e.g. DVWA) and write a findings report."
+  }
+ ],
+ "qa-engineer": [
+  {
+   "title": "Test suite for a demo website",
+   "skills": [
+    "manual testing",
+    "test cases",
+    "selenium"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Write test cases and automate the main flows with Selenium."
+  },
+  {
+   "title": "API test collection",
+   "skills": [
+    "postman",
+    "api testing",
+    "automation testing"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Automated Postman tests for a public API with reports."
+  }
+ ],
+ "ui-ux-designer": [
+  {
+   "title": "App redesign case study",
+   "skills": [
+    "figma",
+    "ux design",
+    "user research",
+    "wireframing"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 2,
+   "description": "Redesign a popular app screen, test with 5 users and document your process."
+  },
+  {
+   "title": "Design system starter",
+   "skills": [
+    "figma",
+    "ui design",
+    "design systems"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 1,
+   "description": "Colours, type, buttons and form components with usage notes."
+  }
+ ],
+ "technical-support-engineer": [
+  {
+   "title": "Troubleshooting knowledge base",
+   "skills": [
+    "troubleshooting",
+    "operating systems",
+    "networking"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Write 15 step-by-step guides for common PC and network issues."
+  },
+  {
+   "title": "Home network setup guide",
+   "skills": [
+    "networking",
+    "computer networks"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Document setting up and securing a small office network."
+  }
+ ],
+ "database-administrator": [
+  {
+   "title": "College database design",
+   "skills": [
+    "sql",
+    "database design",
+    "mysql"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Design a normalised schema for students, courses and results with sample queries."
+  },
+  {
+   "title": "Query optimisation study",
+   "skills": [
+    "sql",
+    "query optimization",
+    "postgresql"
+   ],
+   "difficulty": "Intermediate",
+   "weeks": 1,
+   "description": "Measure slow queries and speed them up with indexes."
+  }
+ ],
+ "embedded-engineer": [
+  {
+   "title": "Smart home sensor node",
+   "skills": [
+    "embedded c",
+    "arduino",
+    "iot"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 2,
+   "description": "Read temperature and humidity and send data to a dashboard."
+  },
+  {
+   "title": "RTOS task scheduler demo",
+   "skills": [
+    "rtos",
+    "microcontrollers",
+    "c"
+   ],
+   "difficulty": "Advanced",
+   "weeks": 3,
+   "description": "Run multiple tasks on a microcontroller with priorities."
+  }
+ ],
+ "digital-marketing-executive": [
+  {
+   "title": "Grow a social media page",
+   "skills": [
+    "social media marketing",
+    "canva",
+    "digital marketing"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 2,
+   "description": "Run a page for a club or local shop for a month and report on growth."
+  },
+  {
+   "title": "SEO audit of a website",
+   "skills": [
+    "seo",
+    "google analytics"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Audit a small website and present prioritised improvements."
+  }
+ ],
+ "content-writer": [
+  {
+   "title": "Blog with 10 articles",
+   "skills": [
+    "content writing",
+    "seo",
+    "wordpress"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 2,
+   "description": "Publish well-researched, SEO-friendly articles on a topic you know."
+  },
+  {
+   "title": "Product copy rewrite",
+   "skills": [
+    "copywriting",
+    "content writing"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Rewrite product pages for clarity and persuasion; show before and after."
+  }
+ ],
+ "hr-associate": [
+  {
+   "title": "Recruitment process plan",
+   "skills": [
+    "recruitment",
+    "ms office",
+    "communication"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Design a hiring process for a student club role, including screening criteria."
+  },
+  {
+   "title": "HR analytics sheet",
+   "skills": [
+    "excel",
+    "presentation skills"
+   ],
+   "difficulty": "Beginner",
+   "weeks": 1,
+   "description": "Track mock applicants in Excel and present hiring funnel metrics."
+  }
+ ]
+}

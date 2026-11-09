@@ -1,0 +1,25 @@
+# Python virtual environment and caches
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Local data: secret.key, the SQLite DB (user accounts, saved API keys)
+instance/
+*.db
+*.sqlite3
+.env
+.env.*
+
+# Downloaded / trained model files (recreate with scripts/download_models.py and scripts/train_fake_job.py)
+models/
+
+# Large datasets (download separately, see docs/SETUP.md)
+data/fake_job_postings.csv
+
+# Archives and OS clutter
+*.zip
+Thumbs.db
+.DS_Store

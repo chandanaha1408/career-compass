@@ -1,0 +1,23 @@
+Rahul Sharma
+rahul.sharma@email.com | +91 98765 43210 | Bengaluru
+
+EDUCATION
+B.E. in Information Science and Engineering, XYZ Institute of Technology (2023 - 2027)
+CGPA: 8.6
+
+SKILLS
+Languages: Python, Java, C, SQL
+AI/ML: Machine Learning, NLP, scikit-learn, pandas, numpy, TensorFlow
+Web: HTML, CSS, Flask
+Tools: Git, GitHub, Linux
+
+PROJECTS
+Fake News Detection - Built an NLP model using TF-IDF and Logistic Regression in Python with scikit-learn, achieving 92% accuracy.
+Student Result Portal - Flask web application with MySQL database and REST API.
+
+INTERNSHIP
+AI Intern, ABC Labs (2 months) - Worked on data analysis and data visualization with matplotlib.
+
+ACHIEVEMENTS
+Problem solving: solved 300+ problems on data structures and algorithms.
+Teamwork and leadership as coordinator of college coding club.

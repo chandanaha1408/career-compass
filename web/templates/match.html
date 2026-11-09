@@ -1,0 +1,27 @@
+{% extends "base.html" %}{% from "macros.html" import bar, score, chips %}{% block title %}Match details{% endblock %}
+{% block content %}
+<p class="back"><a href="{{ url_for('main.jobs') if source!='saved' else url_for('main.tracker') }}">&larr; Back</a></p>
+<header class="pagehead"><div><h1>{{ job.title }}</h1><p class="meta">{{ job.company }}{% if job.location %} · {{ job.location }}{% endif %} · {{ job.source }}</p>
+{% if job.url %}<p><a class="btn ghost" href="{{ job.url }}" target="_blank" rel="noopener">Open original posting</a></p>{% endif %}</div>{{ score(r.score, r.verdict) }}</header>
+{% if r.risk and r.risk.level!='low' %}<div class="risk {{ r.risk.level }}"><b>{{ 'Likely fake posting' if r.risk.level=='high' else 'Be careful' }}:</b> {{ r.risk.reasons|join('; ') }}</div>{% endif %}
+<div class="grid2">
+<section class="panel"><h2>Score breakdown</h2>
+<table class="breakdown"><tbody>
+<tr><th>Meaning similarity <span class="meta">40%</span></th><td>{{ bar(r.semantic*100) }}</td><td>{{ (r.semantic*100)|round|int }}</td></tr>
+<tr><th>Skill match <span class="meta">35%</span></th><td>{{ bar(r.skills*100) }}</td><td>{{ (r.skills*100)|round|int }}</td></tr>
+<tr><th>Keyword overlap <span class="meta">15%</span></th><td>{{ bar(r.keywords*100) }}</td><td>{{ (r.keywords*100)|round|int }}</td></tr>
+<tr><th>Level &amp; education fit <span class="meta">10%</span></th><td>{{ bar(r.fit*100) }}</td><td>{{ (r.fit*100)|round|int }}</td></tr>
+</tbody></table>
+<p class="meta">Meaning similarity method: {{ r.sem_method }}.</p></section>
+<section class="panel"><h2>Skills</h2>
+<h3>Must-have</h3><p>{{ chips(r.matched|select('in', r.analysis.must)|list, 'have') }}{{ chips(r.missing_must, 'miss') }}</p>
+{% if r.analysis.nice %}<h3>Nice to have</h3><p>{{ chips(r.matched|select('in', r.analysis.nice)|list, 'have') }}{{ chips(r.missing_nice, 'miss soft') }}</p>{% endif %}
+<p class="meta">{{ 'Suitable for freshers' if r.analysis.fresher_friendly else 'Asks for ' ~ r.analysis.min_years ~ '+ years of experience' }}{% if r.analysis.degree_required %} · degree mentioned{% endif %}</p>
+{% if index is not none %}<p><a href="{{ url_for('main.feedback', job=index) }}#ai">Tailor my resume for this job</a></p>{% endif %}</section></div>
+<section class="panel"><h2>Requirement by requirement</h2>
+<p class="meta">{{ counts.strong }} strong · {{ counts.partial }} partial · {{ counts.missing }} missing. Each requirement is paired with the line in your resume closest in meaning.</p>
+<ol class="req big">{% for row in rows %}<li class="{{ row.status }}"><span>{{ row.requirement }}{% if row.kind=='nice' %} <i class="tag">nice to have</i>{% endif %}</span>
+<em>{% if row.evidence %}{{ row.evidence }}{% else %}Not found in your resume{% endif %}{% if row.skills_missing %} · missing: {{ row.skills_missing|join(', ') }}{% endif %}</em></li>{% endfor %}</ol></section>
+{% if r.analysis.summary %}<section class="panel"><h2>Job in three lines</h2><ul>{% for s in r.analysis.summary %}<li>{{ s }}</li>{% endfor %}</ul></section>{% endif %}
+{% if near %}<section class="panel near"><h2>Quick wins across your results</h2><ul>{% for n in near %}<li>Learn <b>{{ n.skills|join(' and ') }}</b> → {{ n.count }} more good match{{ 'es' if n.count>1 }}</li>{% endfor %}</ul></section>{% endif %}
+{% endblock %}

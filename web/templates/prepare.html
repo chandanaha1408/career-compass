@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% from "macros.html" import bar, resource %}{% block title %}Prepare{% endblock %}
+{% block content %}
+<header class="pagehead"><div><h1>Prepare for {{ role.title }}</h1></div>
+<form method="get" class="inline"><select name="role" aria-label="Role">{% for t in targets %}<option value="{{ t }}" {{ 'selected' if t==role.id }}>{{ roles[t].title }}</option>{% endfor %}</select>
+<label>Hours/day<input type="number" name="hours" min="1" max="10" value="{{ hours }}"></label>
+<label>Weeks<input type="number" name="weeks" min="1" max="16" value="{{ weeks }}"></label><button class="btn ghost">Update plan</button></form></header>
+<section class="panel ready"><div class="readyscore"><b>{{ ready.score }}</b><span>{{ ready.label }}</span></div>
+<div><table class="breakdown"><tbody>{% for name, v in ready.parts.items() %}<tr class="{{ 'weak' if name==ready.weakest }}"><th>{{ name }} <span class="meta">{{ ready.weights[name] }}%</span></th><td>{{ bar(v) }}</td><td>{{ v }}</td></tr>{% endfor %}</tbody></table>
+<p>Your weakest area is <b>{{ ready.weakest|lower }}</b>.{% if ready.weakest=='Portfolio' %} Build one of the project ideas below.{% elif ready.weakest=='Placement fundamentals' %} Update the self-assessment and follow the interview prep in your plan.{% elif ready.weakest=='Resume quality' %} Work through the <a href="{{ url_for('main.feedback') }}">resume feedback</a>.{% else %} Focus on the skill gaps below.{% endif %}</p></div></section>
+{% if ready.fundamentals %}<section class="panel"><h2>Placement fundamentals: self-assessment</h2>
+<form method="post" action="{{ url_for('main.save_fundamentals') }}" class="fund">{{ csrf_field() }}
+{% for topic, f in ready.fundamentals.items() %}<label>{{ topic }}{% if f.evidence %} <i class="tag">seen in resume</i>{% endif %}<select name="{{ topic }}">{% for l in levels %}<option value="{{ loop.index0 }}" {{ 'selected' if loop.index0==f.self }}>{{ l }}</option>{% endfor %}</select></label>{% endfor %}
+<button class="btn ghost">Save</button></form></section>{% endif %}
+<section class="panel" id="plan"><h2>Your {{ weeks }}-week plan <span class="meta">{{ plan.weekly_hours }} hours a week</span></h2>
+{% if not plan.gaps %}<p class="good">No skill gaps for this role. The plan focuses on interview preparation.</p>{% endif %}
+<div class="weeks">{% for w in plan.weeks %}<div class="week"><h3>Week {{ w.week }} <span class="meta">{{ w.hours }} h</span></h3><ul>
+{% for it in w['items'] %}<li class="it {{ it.type }} {{ 'done' if it.done }}"><form method="post" action="{{ url_for('main.toggle_progress') }}">{{ csrf_field() }}<input type="hidden" name="key" value="{{ it.key }}">
+<button class="check" aria-label="Mark done" title="{{ 'Mark as not done' if it.done else 'Mark as done' }}">{{ '✓' if it.done else '' }}</button></form>
+<div><b>{{ it.title }}</b> <span class="meta">{{ it.hours }} h</span>{% if it.project %}<p class="meta">{{ it.project.description }}</p>{% endif %}
+{% if it.resources %}<ul class="res">{% for r in it.resources[:2] %}{{ resource(r) }}{% endfor %}</ul>{% endif %}</div></li>{% endfor %}</ul></div>{% endfor %}</div>
+{% if plan.later %}<p class="meta">Doesn't fit in {{ weeks }} weeks: {{ plan.later|join(', ') }}. Add hours or weeks to include them.</p>{% endif %}
+<p class="meta">Ticking a skill item adds that skill to your profile and refreshes your job matches.</p></section>
+<div class="grid2">
+<section class="panel"><h2>Skill gaps</h2><table class="gaps"><tr><th>Skill</th><th>Status</th><th>In postings</th><th>Free resources</th></tr>
+{% for gp in plan.gaps %}<tr><td><b>{{ gp.skill }}</b>{% if gp.must %} <i class="tag">must-have</i>{% endif %}</td><td>{{ gp.status }}</td><td>{{ gp.demand }}%</td><td><ul class="res">{% for r in gp.resources %}{{ resource(r) }}{% endfor %}</ul></td></tr>{% else %}<tr><td colspan="4" class="good">None.</td></tr>{% endfor %}</table></section>
+<section class="panel"><h2>Interview preparation</h2>{% for t in interview %}<h3>{{ t.topic }}</h3><ul class="res">{% for r in t.resources[:3] %}{{ resource(r) }}{% endfor %}</ul>{% endfor %}</section></div>
+<section class="panel"><h2>Project ideas</h2><div class="projects">{% for pr in projects %}<div><h3>{{ pr.title }}</h3><p>{{ pr.description }}</p><p class="meta">{{ pr.difficulty }} · about {{ pr.weeks }} week{{ 's' if pr.weeks>1 }} · {{ pr.skills|join(', ') }}</p>{% if pr.covers %}<p class="good">Covers your gaps: {{ pr.covers|join(', ') }}</p>{% endif %}</div>{% endfor %}</div></section>
+<p class="meta">Resource links point to official free pages. Sites change; if a link moves, search the course name.</p>
+{% endblock %}

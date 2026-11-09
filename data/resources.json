@@ -1,0 +1,1402 @@
+{
+ "_note": "Links added from well-known official pages. Re-check periodically; edit this file to update.",
+ "added": "2026-11-09",
+ "skills": {
+  "python": [
+   {
+    "title": "Official Python Tutorial",
+    "provider": "Python.org",
+    "url": "https://docs.python.org/3/tutorial/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Kaggle Learn: Python",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/python",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "CS50's Introduction to Programming with Python",
+    "provider": "Harvard",
+    "url": "https://cs50.harvard.edu/python/",
+    "level": "beginner",
+    "format": "video",
+    "certificate": "none"
+   },
+   {
+    "title": "Scientific Computing with Python",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "java": [
+   {
+    "title": "Learn Java",
+    "provider": "dev.java (Oracle)",
+    "url": "https://dev.java/learn/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Java Programming MOOC",
+    "provider": "University of Helsinki",
+    "url": "https://java-programming.mooc.fi/",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "none"
+   },
+   {
+    "title": "Programming in Java",
+    "provider": "NPTEL",
+    "url": "https://nptel.ac.in/",
+    "level": "beginner",
+    "format": "video",
+    "certificate": "paid exam"
+   }
+  ],
+  "c": [
+   {
+    "title": "Programming in C",
+    "provider": "NPTEL",
+    "url": "https://nptel.ac.in/",
+    "level": "beginner",
+    "format": "video",
+    "certificate": "paid exam"
+   }
+  ],
+  "c++": [
+   {
+    "title": "LearnCpp",
+    "provider": "learncpp.com",
+    "url": "https://www.learncpp.com/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "javascript": [
+   {
+    "title": "The Modern JavaScript Tutorial",
+    "provider": "javascript.info",
+    "url": "https://javascript.info/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "JavaScript Algorithms and Data Structures",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "typescript": [
+   {
+    "title": "TypeScript Handbook",
+    "provider": "typescriptlang.org",
+    "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "html": [
+   {
+    "title": "Learn web development",
+    "provider": "MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Responsive Web Design",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "css": [
+   {
+    "title": "Learn CSS",
+    "provider": "web.dev (Google)",
+    "url": "https://web.dev/learn/css",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Responsive Web Design",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "responsive design": [
+   {
+    "title": "Learn Responsive Design",
+    "provider": "web.dev (Google)",
+    "url": "https://web.dev/learn/design",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "react": [
+   {
+    "title": "Learn React",
+    "provider": "react.dev",
+    "url": "https://react.dev/learn",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Front End Development Libraries",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "node.js": [
+   {
+    "title": "Learn Node.js",
+    "provider": "nodejs.org",
+    "url": "https://nodejs.org/en/learn",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "express": [
+   {
+    "title": "Express Getting Started",
+    "provider": "expressjs.com",
+    "url": "https://expressjs.com/en/starter/installing.html",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "django": [
+   {
+    "title": "Writing your first Django app",
+    "provider": "Django docs",
+    "url": "https://docs.djangoproject.com/en/stable/intro/tutorial01/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "flask": [
+   {
+    "title": "Flask Tutorial",
+    "provider": "Pallets",
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "fastapi": [
+   {
+    "title": "FastAPI Tutorial",
+    "provider": "fastapi.tiangolo.com",
+    "url": "https://fastapi.tiangolo.com/tutorial/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "spring boot": [
+   {
+    "title": "Spring Guides",
+    "provider": "spring.io",
+    "url": "https://spring.io/guides",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "rest api": [
+   {
+    "title": "HTTP and web APIs",
+    "provider": "MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Postman API Fundamentals",
+    "provider": "Postman Academy",
+    "url": "https://academy.postman.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "microservices": [
+   {
+    "title": "Microservices patterns",
+    "provider": "microservices.io",
+    "url": "https://microservices.io/",
+    "level": "advanced",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "tailwind": [
+   {
+    "title": "Tailwind CSS docs",
+    "provider": "tailwindcss.com",
+    "url": "https://tailwindcss.com/docs",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "bootstrap": [
+   {
+    "title": "Bootstrap docs",
+    "provider": "getbootstrap.com",
+    "url": "https://getbootstrap.com/docs/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "sql": [
+   {
+    "title": "SQLBolt interactive lessons",
+    "provider": "SQLBolt",
+    "url": "https://sqlbolt.com/",
+    "level": "beginner",
+    "format": "practice",
+    "certificate": "none"
+   },
+   {
+    "title": "Kaggle Learn: Intro to SQL",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/intro-to-sql",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "SQL practice",
+    "provider": "HackerRank",
+    "url": "https://www.hackerrank.com/domains/sql",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "free"
+   },
+   {
+    "title": "Top SQL 50 study plan",
+    "provider": "LeetCode",
+    "url": "https://leetcode.com/studyplan/top-sql-50/",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "mysql": [
+   {
+    "title": "MySQL Tutorial",
+    "provider": "W3Schools",
+    "url": "https://www.w3schools.com/mysql/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "postgresql": [
+   {
+    "title": "PostgreSQL Tutorial",
+    "provider": "postgresqltutorial.com",
+    "url": "https://www.postgresqltutorial.com/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "mongodb": [
+   {
+    "title": "MongoDB University",
+    "provider": "MongoDB",
+    "url": "https://learn.mongodb.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "dbms": [
+   {
+    "title": "DBMS tutorial",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/dbms/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Database Systems (CMU 15-445)",
+    "provider": "Carnegie Mellon",
+    "url": "https://15445.courses.cs.cmu.edu/",
+    "level": "advanced",
+    "format": "video",
+    "certificate": "none"
+   }
+  ],
+  "git": [
+   {
+    "title": "Pro Git book",
+    "provider": "git-scm.com",
+    "url": "https://git-scm.com/book/en/v2",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Learn Git Branching",
+    "provider": "learngitbranching.js.org",
+    "url": "https://learngitbranching.js.org/",
+    "level": "beginner",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "github": [
+   {
+    "title": "GitHub Skills",
+    "provider": "GitHub",
+    "url": "https://skills.github.com/",
+    "level": "beginner",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "excel": [
+   {
+    "title": "Excel help and learning",
+    "provider": "Microsoft",
+    "url": "https://support.microsoft.com/en-us/excel",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "power bi": [
+   {
+    "title": "Power BI training",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "tableau": [
+   {
+    "title": "Free training videos",
+    "provider": "Tableau",
+    "url": "https://www.tableau.com/learn/training",
+    "level": "beginner",
+    "format": "video",
+    "certificate": "none"
+   }
+  ],
+  "pandas": [
+   {
+    "title": "Kaggle Learn: Pandas",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/pandas",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "data visualization": [
+   {
+    "title": "Kaggle Learn: Data Visualization",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/data-visualization",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "data cleaning": [
+   {
+    "title": "Kaggle Learn: Data Cleaning",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/data-cleaning",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "data analysis": [
+   {
+    "title": "Data Analysis with Python",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "Kaggle Learn: Pandas",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/pandas",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "statistics": [
+   {
+    "title": "Statistics and probability",
+    "provider": "Khan Academy",
+    "url": "https://www.khanacademy.org/math/statistics-probability",
+    "level": "beginner",
+    "format": "video",
+    "certificate": "none"
+   },
+   {
+    "title": "StatQuest",
+    "provider": "YouTube",
+    "url": "https://www.youtube.com/@statquest",
+    "level": "intermediate",
+    "format": "video",
+    "certificate": "none"
+   }
+  ],
+  "machine learning": [
+   {
+    "title": "Machine Learning Crash Course",
+    "provider": "Google",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "none"
+   },
+   {
+    "title": "Kaggle Learn: Intro to Machine Learning",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "Kaggle Learn: Intermediate Machine Learning",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/intermediate-machine-learning",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "scikit-learn": [
+   {
+    "title": "scikit-learn tutorials",
+    "provider": "scikit-learn.org",
+    "url": "https://scikit-learn.org/stable/tutorial/index.html",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "feature engineering": [
+   {
+    "title": "Kaggle Learn: Feature Engineering",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/feature-engineering",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "deep learning": [
+   {
+    "title": "Kaggle Learn: Intro to Deep Learning",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/intro-to-deep-learning",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "Practical Deep Learning for Coders",
+    "provider": "fast.ai",
+    "url": "https://course.fast.ai/",
+    "level": "intermediate",
+    "format": "video",
+    "certificate": "none"
+   }
+  ],
+  "pytorch": [
+   {
+    "title": "PyTorch Tutorials",
+    "provider": "pytorch.org",
+    "url": "https://pytorch.org/tutorials/",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "tensorflow": [
+   {
+    "title": "TensorFlow Tutorials",
+    "provider": "tensorflow.org",
+    "url": "https://www.tensorflow.org/tutorials",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "nlp": [
+   {
+    "title": "Hugging Face Learn (LLM/NLP course)",
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/learn",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "none"
+   },
+   {
+    "title": "Advanced NLP with spaCy",
+    "provider": "spaCy",
+    "url": "https://course.spacy.io/",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "none"
+   }
+  ],
+  "transformers": [
+   {
+    "title": "Hugging Face Learn (LLM/NLP course)",
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/learn",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "none"
+   }
+  ],
+  "hugging face": [
+   {
+    "title": "Hugging Face Learn",
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/learn",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "none"
+   }
+  ],
+  "spacy": [
+   {
+    "title": "Advanced NLP with spaCy",
+    "provider": "spaCy",
+    "url": "https://course.spacy.io/",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "none"
+   }
+  ],
+  "llm": [
+   {
+    "title": "Short courses on LLMs",
+    "provider": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/short-courses/",
+    "level": "intermediate",
+    "format": "video",
+    "certificate": "none"
+   }
+  ],
+  "generative ai": [
+   {
+    "title": "Generative AI learning paths",
+    "provider": "Google Cloud Skills Boost",
+    "url": "https://www.cloudskillsboost.google/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "Short courses on generative AI",
+    "provider": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/short-courses/",
+    "level": "beginner",
+    "format": "video",
+    "certificate": "none"
+   }
+  ],
+  "prompt engineering": [
+   {
+    "title": "Prompt Engineering Guide",
+    "provider": "promptingguide.ai",
+    "url": "https://www.promptingguide.ai/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "langchain": [
+   {
+    "title": "Short courses (LangChain)",
+    "provider": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/short-courses/",
+    "level": "intermediate",
+    "format": "video",
+    "certificate": "none"
+   }
+  ],
+  "computer vision": [
+   {
+    "title": "Kaggle Learn: Computer Vision",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/computer-vision",
+    "level": "intermediate",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "opencv": [
+   {
+    "title": "OpenCV Tutorials",
+    "provider": "opencv.org",
+    "url": "https://docs.opencv.org/4.x/d9/df8/tutorial_root.html",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "spark": [
+   {
+    "title": "Spark Quick Start",
+    "provider": "Apache",
+    "url": "https://spark.apache.org/docs/latest/quick-start.html",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "airflow": [
+   {
+    "title": "Airflow Tutorial",
+    "provider": "Apache",
+    "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "docker": [
+   {
+    "title": "Docker Get Started",
+    "provider": "Docker",
+    "url": "https://docs.docker.com/get-started/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "kubernetes": [
+   {
+    "title": "Kubernetes Basics",
+    "provider": "kubernetes.io",
+    "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "linux": [
+   {
+    "title": "Linux Journey",
+    "provider": "linuxjourney.com",
+    "url": "https://linuxjourney.com/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "OverTheWire: Bandit",
+    "provider": "OverTheWire",
+    "url": "https://overthewire.org/wargames/bandit/",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "shell scripting": [
+   {
+    "title": "Linux Journey",
+    "provider": "linuxjourney.com",
+    "url": "https://linuxjourney.com/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "ci/cd": [
+   {
+    "title": "GitHub Actions documentation",
+    "provider": "GitHub",
+    "url": "https://docs.github.com/en/actions",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "jenkins": [
+   {
+    "title": "Jenkins tutorials",
+    "provider": "jenkins.io",
+    "url": "https://www.jenkins.io/doc/tutorials/",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "terraform": [
+   {
+    "title": "Terraform tutorials",
+    "provider": "HashiCorp",
+    "url": "https://developer.hashicorp.com/terraform/tutorials",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "aws": [
+   {
+    "title": "AWS Skill Builder (Cloud Practitioner Essentials)",
+    "provider": "AWS",
+    "url": "https://skillbuilder.aws/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "cloud computing": [
+   {
+    "title": "AWS Skill Builder",
+    "provider": "AWS",
+    "url": "https://skillbuilder.aws/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "Azure Fundamentals path",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/training/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "azure": [
+   {
+    "title": "Azure training paths",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/training/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "gcp": [
+   {
+    "title": "Google Cloud Skills Boost",
+    "provider": "Google",
+    "url": "https://www.cloudskillsboost.google/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "networking": [
+   {
+    "title": "Networking courses",
+    "provider": "Cisco Networking Academy",
+    "url": "https://www.netacad.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "Computer Network tutorials",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/computer-network-tutorials/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "computer networks": [
+   {
+    "title": "Computer Network tutorials",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/computer-network-tutorials/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Networking courses",
+    "provider": "Cisco Networking Academy",
+    "url": "https://www.netacad.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "cybersecurity": [
+   {
+    "title": "Introduction to Cybersecurity",
+    "provider": "Cisco Networking Academy",
+    "url": "https://www.netacad.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "TryHackMe free rooms",
+    "provider": "TryHackMe",
+    "url": "https://tryhackme.com/",
+    "level": "beginner",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "network security": [
+   {
+    "title": "TryHackMe free rooms",
+    "provider": "TryHackMe",
+    "url": "https://tryhackme.com/",
+    "level": "beginner",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "owasp": [
+   {
+    "title": "OWASP Top 10",
+    "provider": "OWASP",
+    "url": "https://owasp.org/www-project-top-ten/",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "penetration testing": [
+   {
+    "title": "Web Security Academy",
+    "provider": "PortSwigger",
+    "url": "https://portswigger.net/web-security",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "wireshark": [
+   {
+    "title": "Wireshark documentation",
+    "provider": "wireshark.org",
+    "url": "https://www.wireshark.org/docs/",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "manual testing": [
+   {
+    "title": "Software testing tutorial",
+    "provider": "Guru99",
+    "url": "https://www.guru99.com/software-testing.html",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "test cases": [
+   {
+    "title": "Software testing tutorial",
+    "provider": "Guru99",
+    "url": "https://www.guru99.com/software-testing.html",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "automation testing": [
+   {
+    "title": "Selenium documentation",
+    "provider": "selenium.dev",
+    "url": "https://www.selenium.dev/documentation/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "selenium": [
+   {
+    "title": "Selenium documentation",
+    "provider": "selenium.dev",
+    "url": "https://www.selenium.dev/documentation/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "postman": [
+   {
+    "title": "Postman Academy",
+    "provider": "Postman",
+    "url": "https://academy.postman.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "api testing": [
+   {
+    "title": "Postman Academy",
+    "provider": "Postman",
+    "url": "https://academy.postman.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "figma": [
+   {
+    "title": "Learn design with Figma",
+    "provider": "Figma",
+    "url": "https://www.figma.com/resources/learn-design/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "ux design": [
+   {
+    "title": "Laws of UX",
+    "provider": "lawsofux.com",
+    "url": "https://lawsofux.com/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "android": [
+   {
+    "title": "Android Basics with Compose",
+    "provider": "Android Developers",
+    "url": "https://developer.android.com/courses",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "none"
+   }
+  ],
+  "kotlin": [
+   {
+    "title": "Kotlin docs: Get started",
+    "provider": "kotlinlang.org",
+    "url": "https://kotlinlang.org/docs/getting-started.html",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "flutter": [
+   {
+    "title": "Write your first Flutter app",
+    "provider": "flutter.dev",
+    "url": "https://docs.flutter.dev/get-started/codelab",
+    "level": "beginner",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "data structures": [
+   {
+    "title": "DSA tutorials",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/dsa/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "NeetCode roadmap",
+    "provider": "NeetCode",
+    "url": "https://neetcode.io/roadmap",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "algorithms": [
+   {
+    "title": "Introduction to Algorithms (MIT 6.006)",
+    "provider": "MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+    "level": "intermediate",
+    "format": "video",
+    "certificate": "none"
+   }
+  ],
+  "oops": [
+   {
+    "title": "OOPs concepts",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "operating systems": [
+   {
+    "title": "Operating Systems: Three Easy Pieces (free book)",
+    "provider": "UW-Madison",
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "system design": [
+   {
+    "title": "System Design Primer",
+    "provider": "GitHub",
+    "url": "https://github.com/donnemartin/system-design-primer",
+    "level": "advanced",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "arduino": [
+   {
+    "title": "Arduino Learn",
+    "provider": "Arduino",
+    "url": "https://docs.arduino.cc/learn/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "embedded c": [
+   {
+    "title": "Embedded systems courses",
+    "provider": "NPTEL",
+    "url": "https://nptel.ac.in/",
+    "level": "beginner",
+    "format": "video",
+    "certificate": "paid exam"
+   }
+  ],
+  "digital marketing": [
+   {
+    "title": "Free marketing courses",
+    "provider": "HubSpot Academy",
+    "url": "https://academy.hubspot.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   },
+   {
+    "title": "Google Skillshop",
+    "provider": "Google",
+    "url": "https://skillshop.withgoogle.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "seo": [
+   {
+    "title": "SEO Starter Guide",
+    "provider": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "google analytics": [
+   {
+    "title": "Google Skillshop",
+    "provider": "Google",
+    "url": "https://skillshop.withgoogle.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "google ads": [
+   {
+    "title": "Google Skillshop",
+    "provider": "Google",
+    "url": "https://skillshop.withgoogle.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "social media marketing": [
+   {
+    "title": "Free marketing courses",
+    "provider": "HubSpot Academy",
+    "url": "https://academy.hubspot.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "content writing": [
+   {
+    "title": "Technical Writing courses",
+    "provider": "Google",
+    "url": "https://developers.google.com/tech-writing",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Content marketing course",
+    "provider": "HubSpot Academy",
+    "url": "https://academy.hubspot.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ],
+  "agile": [
+   {
+    "title": "Agile coach",
+    "provider": "Atlassian",
+    "url": "https://www.atlassian.com/agile",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "scrum": [
+   {
+    "title": "The Scrum Guide",
+    "provider": "scrumguides.org",
+    "url": "https://scrumguides.org/",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "jira": [
+   {
+    "title": "Agile coach (Jira)",
+    "provider": "Atlassian",
+    "url": "https://www.atlassian.com/agile",
+    "level": "beginner",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "communication": [
+   {
+    "title": "Soft skills courses",
+    "provider": "Infosys Springboard",
+    "url": "https://infyspringboard.onwingspan.com/",
+    "level": "beginner",
+    "format": "course",
+    "certificate": "free"
+   }
+  ]
+ },
+ "interview": {
+  "DSA and coding rounds": [
+   {
+    "title": "LeetCode problem set",
+    "provider": "LeetCode",
+    "url": "https://leetcode.com/problemset/",
+    "level": "all",
+    "format": "practice",
+    "certificate": "none"
+   },
+   {
+    "title": "NeetCode roadmap",
+    "provider": "NeetCode",
+    "url": "https://neetcode.io/roadmap",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "none"
+   },
+   {
+    "title": "Strivers DSA sheets",
+    "provider": "takeUforward",
+    "url": "https://takeuforward.org/",
+    "level": "all",
+    "format": "practice",
+    "certificate": "none"
+   },
+   {
+    "title": "Interview preparation kit",
+    "provider": "HackerRank",
+    "url": "https://www.hackerrank.com/interview/interview-preparation-kit",
+    "level": "beginner",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "OOPs": [
+   {
+    "title": "OOPs concepts",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/",
+    "level": "all",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "DBMS": [
+   {
+    "title": "DBMS tutorial",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/dbms/",
+    "level": "all",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Top SQL 50",
+    "provider": "LeetCode",
+    "url": "https://leetcode.com/studyplan/top-sql-50/",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "Operating Systems": [
+   {
+    "title": "Operating Systems tutorial",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/operating-systems/",
+    "level": "all",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "OSTEP (free book)",
+    "provider": "UW-Madison",
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+    "level": "intermediate",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "Computer Networks": [
+   {
+    "title": "Computer Network tutorials",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/computer-network-tutorials/",
+    "level": "all",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "Aptitude and reasoning": [
+   {
+    "title": "Aptitude and reasoning practice",
+    "provider": "IndiaBIX",
+    "url": "https://www.indiabix.com/",
+    "level": "all",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "System design basics": [
+   {
+    "title": "System Design Primer",
+    "provider": "GitHub",
+    "url": "https://github.com/donnemartin/system-design-primer",
+    "level": "advanced",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "HR and behavioural rounds": [
+   {
+    "title": "Behavioral interview guide",
+    "provider": "Tech Interview Handbook",
+    "url": "https://www.techinterviewhandbook.org/behavioral-interview/",
+    "level": "all",
+    "format": "text",
+    "certificate": "none"
+   },
+   {
+    "title": "Tech Interview Handbook",
+    "provider": "techinterviewhandbook.org",
+    "url": "https://www.techinterviewhandbook.org/",
+    "level": "all",
+    "format": "text",
+    "certificate": "none"
+   }
+  ],
+  "SQL interview practice": [
+   {
+    "title": "SQL practice",
+    "provider": "HackerRank",
+    "url": "https://www.hackerrank.com/domains/sql",
+    "level": "all",
+    "format": "practice",
+    "certificate": "free"
+   },
+   {
+    "title": "Top SQL 50",
+    "provider": "LeetCode",
+    "url": "https://leetcode.com/studyplan/top-sql-50/",
+    "level": "intermediate",
+    "format": "practice",
+    "certificate": "none"
+   }
+  ],
+  "ML concepts refresher": [
+   {
+    "title": "Machine Learning Crash Course",
+    "provider": "Google",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "level": "all",
+    "format": "course",
+    "certificate": "none"
+   },
+   {
+    "title": "StatQuest",
+    "provider": "YouTube",
+    "url": "https://www.youtube.com/@statquest",
+    "level": "all",
+    "format": "video",
+    "certificate": "none"
+   }
+  ]
+ }
+}

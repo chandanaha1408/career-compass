@@ -1,0 +1,4 @@
+{% macro bar(value, cls='') %}<span class="bar {{ cls }}"><span style="width: {{ [[value,0]|max,100]|min }}%"></span></span>{% endmacro %}
+{% macro score(value, label) %}<div class="score {{ 'hi' if value>=70 else 'mid' if value>=55 else 'lo' if value>=40 else 'vlo' }}"><b>{{ value|round|int }}</b><small>{{ label }}</small></div>{% endmacro %}
+{% macro chips(items, cls='') %}{% for s in items %}<span class="chip {{ cls }}">{{ s }}</span>{% endfor %}{% endmacro %}
+{% macro resource(r) %}<li><a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.title }}</a> <span class="meta">{{ r.provider }} · {{ r.format }}{% if r.certificate=='free' %} · free certificate/badge{% elif r.certificate=='paid exam' %} · certificate needs paid exam{% endif %}</span></li>{% endmacro %}

@@ -1,0 +1,567 @@
+[
+ {
+  "id": "software-engineer",
+  "title": "Software Engineer (SDE)",
+  "software": true,
+  "query": "software engineer fresher",
+  "description": "Design, code and test software applications. Strong programming fundamentals, data structures and algorithms, object oriented programming, databases and version control. Solves problems and writes clean, efficient code.",
+  "must": [
+   "data structures",
+   "algorithms",
+   "oops",
+   "sql",
+   "git"
+  ],
+  "nice": [
+   "java",
+   "python",
+   "c++",
+   "dbms",
+   "operating systems",
+   "computer networks",
+   "system design",
+   "linux"
+  ]
+ },
+ {
+  "id": "python-developer",
+  "title": "Python Developer",
+  "software": true,
+  "query": "python developer fresher",
+  "description": "Build backend services and automation scripts in Python. Develop REST APIs with Django, Flask or FastAPI, work with relational databases and write tests.",
+  "must": [
+   "python",
+   "sql",
+   "rest api",
+   "git"
+  ],
+  "nice": [
+   "django",
+   "flask",
+   "fastapi",
+   "postgresql",
+   "mysql",
+   "pytest",
+   "docker",
+   "linux",
+   "oops"
+  ]
+ },
+ {
+  "id": "java-developer",
+  "title": "Java Developer",
+  "software": true,
+  "query": "java developer fresher",
+  "description": "Develop enterprise backend applications in Java using Spring Boot. Build REST APIs and microservices, work with SQL databases and write unit tests.",
+  "must": [
+   "java",
+   "oops",
+   "sql",
+   "spring boot"
+  ],
+  "nice": [
+   "rest api",
+   "microservices",
+   "junit",
+   "mysql",
+   "oracle",
+   "git",
+   "dbms",
+   "design patterns"
+  ]
+ },
+ {
+  "id": "frontend-developer",
+  "title": "Frontend Developer",
+  "software": true,
+  "query": "frontend developer fresher",
+  "description": "Build responsive, accessible user interfaces for websites and web apps using HTML, CSS, JavaScript and modern frameworks like React.",
+  "must": [
+   "html",
+   "css",
+   "javascript",
+   "react"
+  ],
+  "nice": [
+   "typescript",
+   "redux",
+   "tailwind",
+   "bootstrap",
+   "next.js",
+   "rest api",
+   "git",
+   "responsive design",
+   "figma"
+  ]
+ },
+ {
+  "id": "backend-developer",
+  "title": "Backend Developer (Node.js)",
+  "software": true,
+  "query": "node.js backend developer fresher",
+  "description": "Build server-side applications and APIs with Node.js and Express, design databases, handle authentication and deploy services.",
+  "must": [
+   "javascript",
+   "node.js",
+   "express",
+   "rest api"
+  ],
+  "nice": [
+   "mongodb",
+   "sql",
+   "postgresql",
+   "typescript",
+   "docker",
+   "redis",
+   "git",
+   "microservices"
+  ]
+ },
+ {
+  "id": "full-stack-developer",
+  "title": "Full Stack Developer",
+  "software": true,
+  "query": "full stack developer fresher",
+  "description": "Develop complete web applications covering frontend interfaces and backend APIs and databases, using stacks like MERN or Django with React.",
+  "must": [
+   "html",
+   "css",
+   "javascript",
+   "react",
+   "node.js",
+   "sql"
+  ],
+  "nice": [
+   "mongodb",
+   "express",
+   "django",
+   "rest api",
+   "git",
+   "docker",
+   "aws",
+   "typescript"
+  ]
+ },
+ {
+  "id": "android-developer",
+  "title": "Android Developer",
+  "software": true,
+  "query": "android developer fresher",
+  "description": "Build Android mobile applications using Kotlin or Java, integrate APIs and Firebase, and publish apps to the Play Store.",
+  "must": [
+   "android",
+   "kotlin",
+   "java"
+  ],
+  "nice": [
+   "android studio",
+   "jetpack compose",
+   "firebase",
+   "rest api",
+   "git",
+   "flutter",
+   "sqlite"
+  ]
+ },
+ {
+  "id": "data-analyst",
+  "title": "Data Analyst",
+  "software": false,
+  "query": "data analyst fresher",
+  "description": "Collect, clean and analyse business data using SQL, Excel and Python, build dashboards in Power BI or Tableau, and present insights to stakeholders.",
+  "must": [
+   "sql",
+   "excel",
+   "data analysis",
+   "data visualization"
+  ],
+  "nice": [
+   "python",
+   "pandas",
+   "power bi",
+   "tableau",
+   "statistics",
+   "data cleaning",
+   "dashboards",
+   "communication"
+  ]
+ },
+ {
+  "id": "data-scientist",
+  "title": "Data Scientist",
+  "software": true,
+  "query": "data scientist fresher",
+  "description": "Use statistics and machine learning to solve business problems: explore data, engineer features, build predictive models and communicate results.",
+  "must": [
+   "python",
+   "machine learning",
+   "statistics",
+   "pandas",
+   "sql"
+  ],
+  "nice": [
+   "scikit-learn",
+   "numpy",
+   "data visualization",
+   "feature engineering",
+   "deep learning",
+   "xgboost",
+   "matplotlib",
+   "seaborn"
+  ]
+ },
+ {
+  "id": "ml-engineer",
+  "title": "Machine Learning Engineer",
+  "software": true,
+  "query": "machine learning engineer fresher",
+  "description": "Train, evaluate and deploy machine learning and deep learning models into production systems, with data pipelines and model monitoring.",
+  "must": [
+   "python",
+   "machine learning",
+   "deep learning",
+   "scikit-learn"
+  ],
+  "nice": [
+   "tensorflow",
+   "pytorch",
+   "model deployment",
+   "docker",
+   "mlops",
+   "numpy",
+   "pandas",
+   "aws",
+   "git"
+  ]
+ },
+ {
+  "id": "nlp-engineer",
+  "title": "NLP Engineer",
+  "software": true,
+  "query": "nlp engineer",
+  "description": "Build natural language processing systems such as text classification, named entity recognition, search and chatbots using transformers and large language models.",
+  "must": [
+   "python",
+   "nlp",
+   "machine learning",
+   "transformers"
+  ],
+  "nice": [
+   "pytorch",
+   "hugging face",
+   "llm",
+   "bert",
+   "spacy",
+   "nltk",
+   "langchain",
+   "deep learning"
+  ]
+ },
+ {
+  "id": "computer-vision-engineer",
+  "title": "Computer Vision Engineer",
+  "software": true,
+  "query": "computer vision engineer",
+  "description": "Develop image and video analysis systems: object detection, image classification and segmentation using deep learning and OpenCV.",
+  "must": [
+   "python",
+   "computer vision",
+   "opencv",
+   "deep learning"
+  ],
+  "nice": [
+   "pytorch",
+   "tensorflow",
+   "cnn",
+   "numpy",
+   "keras",
+   "model deployment"
+  ]
+ },
+ {
+  "id": "data-engineer",
+  "title": "Data Engineer",
+  "software": true,
+  "query": "data engineer fresher",
+  "description": "Build and maintain data pipelines and warehouses, process large datasets with Spark, schedule workflows and ensure data quality.",
+  "must": [
+   "python",
+   "sql",
+   "etl",
+   "spark"
+  ],
+  "nice": [
+   "pyspark",
+   "airflow",
+   "kafka",
+   "data warehousing",
+   "aws",
+   "snowflake",
+   "databricks",
+   "hadoop",
+   "data modeling"
+  ]
+ },
+ {
+  "id": "business-analyst",
+  "title": "Business Analyst",
+  "software": false,
+  "query": "business analyst fresher",
+  "description": "Understand business needs, gather requirements, analyse processes and data, and communicate recommendations to stakeholders and technical teams.",
+  "must": [
+   "business analysis",
+   "requirements gathering",
+   "excel",
+   "communication"
+  ],
+  "nice": [
+   "sql",
+   "power bi",
+   "stakeholder management",
+   "agile",
+   "jira",
+   "powerpoint",
+   "data analysis"
+  ]
+ },
+ {
+  "id": "devops-engineer",
+  "title": "DevOps Engineer",
+  "software": true,
+  "query": "devops engineer fresher",
+  "description": "Automate build, test and deployment pipelines, manage cloud infrastructure, containerise applications and monitor production systems.",
+  "must": [
+   "linux",
+   "docker",
+   "ci/cd",
+   "git"
+  ],
+  "nice": [
+   "kubernetes",
+   "jenkins",
+   "aws",
+   "terraform",
+   "ansible",
+   "shell scripting",
+   "python",
+   "prometheus",
+   "grafana"
+  ]
+ },
+ {
+  "id": "cloud-engineer",
+  "title": "Cloud Engineer",
+  "software": true,
+  "query": "cloud engineer fresher",
+  "description": "Design, deploy and support applications on cloud platforms like AWS and Azure, manage compute, storage and networking resources.",
+  "must": [
+   "aws",
+   "linux",
+   "cloud computing",
+   "networking"
+  ],
+  "nice": [
+   "azure",
+   "gcp",
+   "docker",
+   "terraform",
+   "ec2",
+   "s3",
+   "python",
+   "shell scripting"
+  ]
+ },
+ {
+  "id": "cybersecurity-analyst",
+  "title": "Cybersecurity Analyst",
+  "software": true,
+  "query": "cyber security analyst fresher",
+  "description": "Monitor and protect systems and networks, investigate security incidents, run vulnerability assessments and recommend fixes.",
+  "must": [
+   "cybersecurity",
+   "network security",
+   "linux",
+   "networking"
+  ],
+  "nice": [
+   "penetration testing",
+   "wireshark",
+   "siem",
+   "owasp",
+   "kali linux",
+   "vulnerability assessment",
+   "incident response",
+   "python"
+  ]
+ },
+ {
+  "id": "qa-engineer",
+  "title": "QA / Test Engineer",
+  "software": true,
+  "query": "software tester fresher",
+  "description": "Test software manually and with automation, write test cases, report bugs and work with developers to ship quality products.",
+  "must": [
+   "manual testing",
+   "test cases",
+   "sdlc",
+   "automation testing"
+  ],
+  "nice": [
+   "selenium",
+   "java",
+   "python",
+   "postman",
+   "api testing",
+   "jira",
+   "stlc",
+   "testng",
+   "sql"
+  ]
+ },
+ {
+  "id": "ui-ux-designer",
+  "title": "UI/UX Designer",
+  "software": false,
+  "query": "ui ux designer fresher",
+  "description": "Research user needs and design intuitive interfaces: wireframes, prototypes and visual designs for web and mobile products.",
+  "must": [
+   "figma",
+   "ui design",
+   "ux design",
+   "wireframing"
+  ],
+  "nice": [
+   "prototyping",
+   "user research",
+   "adobe xd",
+   "design systems",
+   "photoshop",
+   "illustrator",
+   "html",
+   "css"
+  ]
+ },
+ {
+  "id": "technical-support-engineer",
+  "title": "Technical Support Engineer",
+  "software": false,
+  "query": "technical support engineer fresher",
+  "description": "Help customers resolve technical issues with software, hardware and networks, troubleshoot problems and document solutions.",
+  "must": [
+   "communication",
+   "networking",
+   "customer service",
+   "problem solving"
+  ],
+  "nice": [
+   "linux",
+   "operating systems",
+   "sql",
+   "troubleshooting",
+   "ms office",
+   "computer networks"
+  ]
+ },
+ {
+  "id": "database-administrator",
+  "title": "Database Administrator / SQL Developer",
+  "software": true,
+  "query": "sql developer fresher",
+  "description": "Write and optimise SQL queries, design database schemas, manage backups and performance for relational databases.",
+  "must": [
+   "sql",
+   "dbms",
+   "database design",
+   "mysql"
+  ],
+  "nice": [
+   "postgresql",
+   "oracle",
+   "pl/sql",
+   "query optimization",
+   "linux",
+   "mongodb"
+  ]
+ },
+ {
+  "id": "embedded-engineer",
+  "title": "Embedded Systems Engineer",
+  "software": true,
+  "query": "embedded engineer fresher",
+  "description": "Program microcontrollers and embedded devices in C, build IoT prototypes and work with hardware interfaces and real-time systems.",
+  "must": [
+   "embedded c",
+   "c",
+   "microcontrollers"
+  ],
+  "nice": [
+   "arduino",
+   "raspberry pi",
+   "iot",
+   "rtos",
+   "python",
+   "verilog",
+   "pcb design",
+   "linux"
+  ]
+ },
+ {
+  "id": "digital-marketing-executive",
+  "title": "Digital Marketing Executive",
+  "software": false,
+  "query": "digital marketing executive fresher",
+  "description": "Plan and run online marketing campaigns across search, social media and email, improve SEO and track performance with analytics.",
+  "must": [
+   "digital marketing",
+   "seo",
+   "social media marketing"
+  ],
+  "nice": [
+   "google analytics",
+   "google ads",
+   "content writing",
+   "email marketing",
+   "sem",
+   "canva",
+   "excel"
+  ]
+ },
+ {
+  "id": "content-writer",
+  "title": "Content Writer",
+  "software": false,
+  "query": "content writer fresher",
+  "description": "Write clear, engaging content for websites, blogs and social media, research topics and optimise articles for search engines.",
+  "must": [
+   "content writing",
+   "communication",
+   "seo"
+  ],
+  "nice": [
+   "copywriting",
+   "wordpress",
+   "social media marketing",
+   "canva",
+   "digital marketing"
+  ]
+ },
+ {
+  "id": "hr-associate",
+  "title": "HR Associate / Recruiter",
+  "software": false,
+  "query": "hr recruiter fresher",
+  "description": "Source and screen candidates, coordinate interviews, maintain employee records and support HR operations.",
+  "must": [
+   "recruitment",
+   "communication",
+   "ms office"
+  ],
+  "nice": [
+   "excel",
+   "stakeholder management",
+   "time management",
+   "presentation skills",
+   "teamwork"
+  ]
+ }
+]

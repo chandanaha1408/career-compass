@@ -1,0 +1,36 @@
+{% extends "base.html" %}{% from "macros.html" import score, chips %}{% block title %}Jobs{% endblock %}
+{% block content %}
+<header class="pagehead"><div><h1>Jobs for you</h1><p class="meta">Ranked by fit for {{ res.targets|map('replace','-',' ')|join(', ') }}{% if p.location %} in {{ p.location }}{% endif %}. {{ res['items']|length }} postings analysed.</p></div>
+<a class="btn ghost" href="{{ url_for('main.jobs', refresh=1) }}" data-busy="Searching and scoring jobs…">Refresh results</a></header>
+{% for n in res.notes %}<div class="flash info">{{ n }}</div>{% endfor %}
+{% if res.near %}<section class="panel near"><h2>Quick wins</h2><ul>{% for n in res.near %}<li>Learn <b>{{ n.skills|join(' and ') }}</b> and {{ n.count }} more posting{{ 's' if n.count>1 }} become good matches <span class="meta">({{ n.jobs|join(', ') }})</span></li>{% endfor %}</ul></section>{% endif %}
+<form class="filters" method="get">
+<label>Min score<input type="number" name="min" min="0" max="100" value="{{ f.min }}"></label>
+<label>Type<select name="type">{% for t in job_types %}<option {{ 'selected' if t==f.type }}>{{ t }}</option>{% endfor %}</select></label>
+<label>Location contains<input name="loc" value="{{ f.loc }}"></label>
+<label>Risky postings<select name="risky"><option value="hide" {{ 'selected' if f.risky=='hide' }}>Hide</option><option value="show" {{ 'selected' if f.risky=='show' }}>Show with warning</option></select></label>
+<button class="btn ghost">Apply</button></form>
+{% if hidden %}<p class="meta">{{ hidden }} high-risk posting{{ 's' if hidden>1 }} hidden. <a href="?risky=show">Show them with warnings</a></p>{% endif %}
+<ol class="jobs">
+{% for i, r in items %}{% set j = r.job %}
+<li class="job {{ 'risky' if r.risk_level=='high' }}">
+  {{ score(r.score, r.verdict) }}
+  <div class="jb">
+    <h2><a href="{{ url_for('main.match', i=i) }}">{{ j.title }}</a></h2>
+    <p class="meta">{{ j.company }} · {{ j.location or 'Location not listed' }}{% if j.job_type %} · {{ j.job_type }}{% endif %} · {{ j.source }}{% if j.posted and j.posted!='sample' %} · posted {{ j.posted }}{% endif %}{% if j.salary_min %} · {{ j.salary_min|lpa }}{% if j.salary_max and j.salary_max!=j.salary_min %}–{{ j.salary_max|lpa }}{% endif %}{% endif %}</p>
+    {% if r.analysis.summary %}<p class="sum">{{ r.analysis.summary[0] }}</p>{% endif %}
+    {% if r.risk_level != 'low' %}<div class="risk {{ r.risk_level }}"><b>{{ 'Likely fake posting' if r.risk_level=='high' else 'Be careful' }}:</b> {{ r.risk.reasons|join('; ') }}</div>{% endif %}
+    <p>{{ chips(r.matched[:6], 'have') }}{{ chips(r.missing_must[:4], 'miss') }}</p>
+    <p class="actions"><a href="{{ url_for('main.match', i=i) }}">Why this score</a>
+    {% if j.url %}<a href="{{ j.url }}" target="_blank" rel="noopener">Apply on site</a>{% endif %}
+    {% if (j.id or j.title) in saved %}<span class="meta">Saved</span>{% else %}<form method="post" action="{{ url_for('main.save_job') }}">{{ csrf_field() }}<input type="hidden" name="i" value="{{ i }}"><button class="link">Save to tracker</button></form>{% endif %}</p>
+  </div>
+</li>
+{% else %}<li class="empty">No postings match these filters. Lower the minimum score or clear the location filter.</li>{% endfor %}
+</ol>
+<section class="panel"><h2>Search popular job sites</h2><p class="meta">Ready-made searches for your target roles.</p>
+{% for title, ls in links %}<p><b>{{ title }}:</b> {% for name, url in ls %}<a href="{{ url }}" target="_blank" rel="noopener">{{ name }}</a>{{ ' · ' if not loop.last }}{% endfor %}</p>{% endfor %}</section>
+<section class="panel"><h2>Check any job description</h2>
+<form method="post" action="{{ url_for('main.match_custom') }}" data-busy="Analysing the job description…">{{ csrf_field() }}<label>Job title<input name="title" placeholder="Optional"></label>
+<label>Job description<textarea name="jd" rows="6" required placeholder="Paste the full posting here"></textarea></label><button class="btn">Explain my match</button></form></section>
+{% endblock %}

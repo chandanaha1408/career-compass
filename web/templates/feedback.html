@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% from "macros.html" import score %}{% block title %}Resume feedback{% endblock %}
+{% block content %}
+<header class="pagehead"><div><h1>Resume feedback</h1><p class="meta">Checks for content, impact, ATS formatting and bias risk.</p></div>{{ score(rv.score, 'Resume quality') }}</header>
+<div class="grid2">
+<section class="panel"><h2>What to fix</h2>
+{% for f in rv.findings|sort(attribute='severity') %}{% endfor %}
+<ul class="findings">{% for sev in ['high','medium','low'] %}{% for f in rv.findings if f.severity==sev %}<li class="{{ sev }}"><b>{{ f.area }}</b> {{ f.message }}</li>{% endfor %}{% endfor %}
+{% if not rv.findings %}<li class="good">No structural issues found.</li>{% endif %}</ul></section>
+<section class="panel" id="compare"><h2>Compare versions</h2>
+{% if resumes|length < 2 %}<p class="meta">Upload an improved version on your profile page, then compare it with the old one here.</p>
+{% else %}<form method="post" action="{{ url_for('main.feedback_compare') }}" class="row" data-busy="Comparing versions…">{{ csrf_field() }}
+<label>Older<select name="old">{% for r in resumes %}<option value="{{ r.id }}" {{ 'selected' if loop.index==2 }}>{{ r.filename }} ({{ r.uploaded[:10] }})</option>{% endfor %}</select></label>
+<label>Newer<select name="new">{% for r in resumes %}<option value="{{ r.id }}">{{ r.filename }} ({{ r.uploaded[:10] }})</option>{% endfor %}</select></label><button class="btn ghost">Compare</button></form>{% endif %}
+{% if compare %}<table class="cmp"><tr><th></th><th>Older</th><th>Newer</th></tr>
+<tr><th>Resume quality</th><td>{{ compare.old_score }}</td><td>{{ compare.new_score }}</td></tr>
+<tr><th>Issues found</th><td>{{ compare.old_issues }}</td><td>{{ compare.new_issues }}</td></tr>
+<tr><th>Average job match</th><td>{{ compare.old_match }}</td><td>{{ compare.new_match }}</td></tr></table>
+{% if compare.added %}<p>Skills added: {{ compare.added|join(', ') }}</p>{% endif %}{% if compare.removed %}<p>Skills no longer found: {{ compare.removed|join(', ') }}</p>{% endif %}{% endif %}</section></div>
+<section class="panel"><h2>Bullet points ({{ rv.weak_bullets }} of {{ rv.bullets|length }} can be stronger)</h2>
+<ul class="bullets">{% for b in rv.bullets %}<li class="{{ 'ok' if not b.issues }}"><q>{{ b.text }}</q>{% if b.issues %}<ul>{% for i in b.issues %}<li>{{ i }}</li>{% endfor %}</ul>{% else %}<span class="good">Strong bullet</span>{% endif %}</li>{% else %}<li class="meta">No project or experience bullets found. Add a Projects section with 2-3 bullets per project.</li>{% endfor %}</ul></section>
+<section class="panel" id="ai"><h2>AI suggestions for a specific job</h2>
+<p class="meta">Gemini rewrites your summary and bullets for one job. It is told never to add skills or experience you don't have; missing numbers appear as [add number]. Review everything before using it.</p>
+{% if not has_key %}<p>Add a free Gemini API key in <a href="{{ url_for('main.settings') }}">Settings</a> to use this.</p>{% endif %}
+<form method="post" action="{{ url_for('main.feedback_ai') }}" data-busy="Asking Gemini, this takes a few seconds…">{{ csrf_field() }}
+<label>Job<select name="job"><option value="">Choose from your results</option>{% for i, t, c in top_jobs %}<option value="{{ i }}" {{ 'selected' if pre==i }}>{{ t }}{% if c %} · {{ c }}{% endif %}</option>{% endfor %}</select></label>
+<label>Or paste a job description<textarea name="jd" rows="4"></textarea></label><button class="btn" {{ 'disabled' if not has_key }}>Get tailored suggestions</button></form>
+{% if ai_error %}<div class="flash error">{{ ai_error }}</div>{% endif %}
+{% if ai %}<div class="ai"><h3>Tailored for {{ ai_job }}</h3><p class="tag">AI-generated: check before using</p>
+{% if ai.summary %}<h3>Summary</h3><p>{{ ai.summary }}</p>{% endif %}
+{% if ai.bullets %}<h3>Rewritten bullets</h3><ul class="rewrite">{% for b in ai.bullets %}<li><del>{{ b.original }}</del><ins>{{ b.improved }}</ins></li>{% endfor %}</ul>{% endif %}
+{% if ai.advice %}<h3>Advice</h3><ul>{% for a in ai.advice %}<li>{{ a }}</li>{% endfor %}</ul>{% endif %}
+{% if ai.honest_gaps %}<h3>Requirements your resume doesn't show</h3><ul>{% for a in ai.honest_gaps %}<li>{{ a }}</li>{% endfor %}</ul>{% endif %}</div>{% endif %}
+</section>
+{% endblock %}

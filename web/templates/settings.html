@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block title %}Settings{% endblock %}
+{% block content %}
+<header class="pagehead"><div><h1>Settings</h1><p class="meta">Keys are stored only in the local database on this computer.</p></div></header>
+<form method="post" class="panel settings">{{ csrf_field() }}
+<h2>Live jobs</h2>
+<label>JSearch provider<select name="jsearch_provider"><option value="openwebninja" {{ 'selected' if s.jsearch_provider!='rapidapi' }}>OpenWeb Ninja</option><option value="rapidapi" {{ 'selected' if s.jsearch_provider=='rapidapi' }}>RapidAPI</option></select></label>
+<label>JSearch API key {% if masked.jsearch_key %}<span class="meta">saved: {{ masked.jsearch_key }}</span>{% endif %}<input name="jsearch_key" type="password" autocomplete="off" placeholder="Leave empty to keep the saved key"></label>
+<label>Adzuna app ID {% if masked.adzuna_id %}<span class="meta">saved: {{ masked.adzuna_id }}</span>{% endif %}<input name="adzuna_id" autocomplete="off"></label>
+<label>Adzuna app key {% if masked.adzuna_key %}<span class="meta">saved: {{ masked.adzuna_key }}</span>{% endif %}<input name="adzuna_key" type="password" autocomplete="off"></label>
+<h2>AI suggestions</h2>
+<label>Gemini API key {% if masked.gemini_key %}<span class="meta">saved: {{ masked.gemini_key }}</span>{% endif %}<input name="gemini_key" type="password" autocomplete="off"></label>
+<label>Gemini model <span class="meta">leave empty for the default; change it if Google retires the default model</span><input name="gemini_model" value="{{ s.gemini_model or '' }}" placeholder="gemini-2.5-flash"></label>
+<p class="meta">To remove a saved key, tick: {% for k in ['jsearch_key','adzuna_id','adzuna_key','gemini_key'] %}<label class="tick"><input type="checkbox" name="clear_{{ k }}"> {{ k.replace('_',' ') }}</label>{% endfor %}</p>
+<button class="btn">Save settings</button></form>
+<section class="panel"><h2>System status</h2><ul class="status">{% for name, ok in nlp_status.items() %}<li class="{{ 'ok' if ok else 'off' }}">{{ name }}: {{ 'active' if ok else 'not installed, fallback in use' }}</li>{% endfor %}
+<li class="{{ 'ok' if fake_model else 'off' }}">Fake job classifier: {{ 'trained model active' if fake_model else 'not trained yet, rules only (see SETUP.md)' }}</li></ul></section>
+{% endblock %}

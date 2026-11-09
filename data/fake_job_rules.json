@@ -1,0 +1,18 @@
+[
+ {"id":"fee","weight":0.65,"reason":"Asks you to pay a fee or deposit (genuine employers never charge candidates)",
+  "pattern":"(registration|training|processing|joining|security|interview)\\s+(fee|charge|deposit)|refundable|pay\\s+(rs\\.?|₹|inr)?\\s?\\d+|paid training"},
+ {"id":"messaging_only","weight":0.3,"reason":"Contact only through WhatsApp or Telegram",
+  "pattern":"whats\\s?app|telegram"},
+ {"id":"free_email","weight":0.25,"reason":"Uses a free email address (gmail/yahoo/etc.) instead of a company domain",
+  "pattern":"[\\w.+-]+@(gmail|yahoo|hotmail|rediffmail|outlook|ymail)\\.(com|in)"},
+ {"id":"guarantee","weight":0.4,"reason":"Promises guaranteed jobs or hiring without interviews",
+  "pattern":"(100%|guaranteed)\\s+(job|placement)|job guarantee|no interview|without interview|direct joining"},
+ {"id":"easy_money","weight":0.45,"reason":"Unrealistic earnings for simple work",
+  "pattern":"earn\\s+(rs\\.?|₹|inr)?\\s?[\\d,]+\\s*(per|a|/)?\\s*(day|daily|week|weekly)|copy\\s*paste|form filling|sms sending|typing work"},
+ {"id":"urgency","weight":0.15,"reason":"High-pressure urgency language",
+  "pattern":"urgent(ly)? hiring|limited seats|hurry|immediate joining after payment|apply fast"},
+ {"id":"sensitive_data","weight":0.5,"reason":"Asks for sensitive documents or details (Aadhaar, bank details, OTP)",
+  "pattern":"aadhaar|aadhar|pan card|bank (details|account)|\\botp\\b"},
+ {"id":"no_experience_high_pay","weight":0.2,"reason":"Very high pay promised to freshers with no requirements",
+  "pattern":"(no experience|freshers can earn|anyone can apply).{0,60}(lpa|salary|earn)"}
+]

@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% from "macros.html" import chips %}{% block title %}Market insights{% endblock %}
+{% block content %}
+<header class="pagehead"><div><h1>What employers want: {{ role.title }}</h1>
+<p class="meta">Based on {{ n }} {{ 'live' if live else 'sample' }} posting{{ 's' if n!=1 }}{% if scope=='all' %} (few postings matched this role exactly, so all results are used){% endif %}.</p></div>
+<form method="get" class="inline"><select name="role" onchange="this.form.submit()" aria-label="Role">{% for t in targets %}<option value="{{ t }}" {{ 'selected' if t==role.id }}>{{ roles[t].title }}</option>{% endfor %}</select></form></header>
+<div class="grid2">
+<section class="panel"><h2>Most-demanded skills</h2><p class="meta">Share of postings that mention each skill. Filled bars are skills you have.</p>
+<ul class="demand">{% for s, pct, have in top %}<li class="{{ 'have' if have }}"><span>{{ s }}</span><span class="bar {{ 'filled' if have else 'empty' }}"><span style="width: {{ pct }}%"></span></span><b>{{ pct }}%</b></li>{% else %}<li>No skill data yet.</li>{% endfor %}</ul></section>
+<section class="panel"><h2>Your biggest gaps</h2>
+{% if missing_hot %}<p>Popular skills you don't list yet:</p><p>{{ chips(missing_hot|map(attribute=0)|list, 'miss') }}</p><p><a href="{{ url_for('main.prepare', role=role.id) }}">Add them to your study plan</a></p>{% else %}<p class="good">You already have the skills most postings ask for.</p>{% endif %}
+<h2>Salary range</h2>
+{% if salary %}<p class="big">{{ salary.median|lpa }} <span class="meta">median</span></p><p class="meta">Range {{ salary.min|lpa }} to {{ salary.max|lpa }}, from {{ salary.count }} postings that list pay (internship stipends shown per year).</p>
+{% else %}<p class="meta">None of these postings list a salary.</p>{% endif %}
+<h2>Emerging terms</h2><p class="meta">Phrases that recur across postings but aren't in our skill list, found with keyphrase extraction.</p>
+{% if emerging %}<p>{% for p, c in emerging %}<span class="chip">{{ p }} <i>{{ c }}</i></span>{% endfor %}</p>{% else %}<p class="meta">Nothing new stands out in these postings.</p>{% endif %}</section></div>
+{% endblock %}

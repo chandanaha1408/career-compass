@@ -1,0 +1,44 @@
+{% extends "base.html" %}{% from "macros.html" import bar, chips %}{% block title %}Profile{% endblock %}
+{% block content %}
+{% if not p %}
+<section class="narrow"><h1>Upload your resume</h1>
+<p>PDF, DOCX or TXT, up to 5 MB. A text-based PDF works best; scanned images can't be read.</p>
+<form method="post" action="{{ url_for('main.upload') }}" enctype="multipart/form-data" class="upload" data-busy="Reading your resume…">{{ csrf_field() }}
+<input type="file" name="resume" accept=".pdf,.docx,.txt" required><button class="btn">Analyse my resume</button></form></section>
+{% else %}
+<header class="pagehead"><div><h1>{{ p.name or 'Your profile' }}</h1>
+<p class="meta">{{ p.level|capitalize }}{% if p.education.degrees %} · {{ p.education.degrees|join(', ') }}{% endif %}{% if p.education.cgpa %} · CGPA {{ p.education.cgpa }}{% endif %}{% if p.education.graduation_year %} · {{ p.education.graduation_year }}{% endif %}{% if p.internships %} · {{ p.internships }} internship mention{{ 's' if p.internships>1 }}{% endif %}</p>
+<p class="meta">{{ p.email or 'No email found' }} · {{ p.phone or 'No phone found' }}</p></div>
+<form method="post" action="{{ url_for('main.upload') }}" enctype="multipart/form-data" class="upload small" data-busy="Reading your resume…">{{ csrf_field() }}
+<input type="file" name="resume" accept=".pdf,.docx,.txt" required aria-label="Upload a new version"><button class="btn ghost">Upload new version</button></form></header>
+
+<div class="grid2">
+<section class="panel"><h2>Roles you fit</h2>
+<form method="post" action="{{ url_for('main.save_targets') }}">{{ csrf_field() }}
+<p class="meta">Pick up to 3 target roles. Jobs, market insights and your study plan follow these.</p>
+<ul class="roles">{% for r in roles %}<li><label><input type="checkbox" name="targets" value="{{ r.id }}" {{ 'checked' if r.id in p.targets }}>
+<span class="rt">{{ r.title }}</span><span class="rc">{{ r.confidence }}%</span></label>{{ bar(r.confidence) }}
+{% if r.missing_must %}<span class="meta">Missing must-haves: {{ r.missing_must|join(', ') }}</span>{% endif %}</li>{% endfor %}</ul>
+<details><summary>Choose a different role</summary><select name="targets" aria-label="Other role"><option value="">-</option>{% for r in all_roles %}<option value="{{ r.id }}">{{ r.title }}</option>{% endfor %}</select></details>
+<div class="row"><label>Location<input name="location" value="{{ p.location }}" placeholder="e.g. Bengaluru or Remote"></label>
+<label>Job type<select name="job_type">{% for t in job_types %}<option {{ 'selected' if t==p.job_type }}>{{ t }}</option>{% endfor %}</select></label></div>
+<button class="btn">Save and find jobs</button></form></section>
+
+<section class="panel"><h2>Bias-risk check</h2>
+{% if p.personal_flags %}<p>Your resume includes details recruiters don't need. They can trigger unconscious bias, so consider removing them:</p>
+<p>{{ chips(p.personal_flags, 'warn') }}</p><p class="meta">The matching engine ignores these details either way.</p>
+{% else %}<p class="good">No unnecessary personal details found. Nice.</p>{% endif %}
+<h2>How your resume was read</h2>
+<ul class="status">{% for name, ok in nlp_status.items() %}<li class="{{ 'ok' if ok else 'off' }}">{{ name }}: {{ 'active' if ok else 'fallback in use' }}</li>{% endfor %}</ul>
+</section></div>
+
+<section class="panel"><h2>Skills ({{ grouped.values()|map('length')|sum }})</h2>
+<p class="meta">Level comes from evidence: listed only = beginner, used in a project = intermediate, several projects or an internship = advanced.</p>
+<div class="skillgrid">{% for cat, items in grouped.items() %}<div><h3>{{ cat }}</h3><p>{% for s in items %}<span class="chip lvl-{{ s.level }}" title="{{ s.level }}{% if s.evidence %} · found as “{{ s.evidence }}”{% endif %}">{{ s.name }}<i>{{ s.level[0]|upper }}</i></span>{% endfor %}</p></div>{% endfor %}</div>
+{% if learning %}<h3>Learning (not counted yet)</h3><p>{{ chips(learning, 'learn') }}</p>{% endif %}
+{% if p.possible %}<h3 id="possible">Possible skills to confirm</h3><p class="meta">These look technical but aren't in our skill list.</p>
+<div class="confirm">{% for t in p.possible %}<form method="post" action="{{ url_for('main.confirm_skill') }}">{{ csrf_field() }}<input type="hidden" name="term" value="{{ t }}"><span class="chip">{{ t }}</span><button name="action" value="confirm" class="link">Yes, a skill</button><button name="action" value="dismiss" class="link muted">No</button></form>{% endfor %}</div>{% endif %}
+</section>
+{% if resumes|length > 1 %}<p class="meta">{{ resumes|length }} resume versions uploaded. Compare them on the <a href="{{ url_for('main.feedback') }}#compare">Resume feedback</a> page.</p>{% endif %}
+{% endif %}
+{% endblock %}

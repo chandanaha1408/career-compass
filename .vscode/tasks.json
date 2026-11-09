@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "1. Create virtual environment", "type": "shell", "command": "python -m venv venv", "problemMatcher": [] },
+    { "label": "2. Install requirements", "type": "shell",
+      "windows": { "command": "venv\\Scripts\\python -m pip install -r requirements.txt" },
+      "command": "venv/bin/python -m pip install -r requirements.txt", "problemMatcher": [] },
+    { "label": "3. Download NLP models", "type": "shell",
+      "windows": { "command": "venv\\Scripts\\python scripts/download_models.py" },
+      "command": "venv/bin/python scripts/download_models.py", "problemMatcher": [] },
+    { "label": "Run tests", "type": "shell",
+      "windows": { "command": "venv\\Scripts\\python -m unittest discover tests" },
+      "command": "venv/bin/python -m unittest discover tests", "problemMatcher": [] }
+  ]
+}
