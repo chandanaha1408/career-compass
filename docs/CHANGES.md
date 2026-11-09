@@ -7,7 +7,7 @@ Update your viva explanations for these files.
 | | Before | After |
 |---|---|---|
 | Command | `python -m unittest discover tests` (pytest was not installed) | `python -m pytest tests` (unittest also works) |
-| Result | 12 tests, all passed | 23 tests, all passed (12 old + 11 new website tests) |
+| Result | 12 tests, all passed | 24 tests, all passed (12 old + 11 new website tests + 1 skill-context test) |
 
 ## Bug fixes
 
@@ -73,6 +73,21 @@ removes the token; this is correct security behaviour (it stops "session fixatio
 ### 8. pytest installed (`requirements.txt`)
 `pytest` was installed in the venv and added to `requirements.txt`, so `python -m pytest tests` works.
 The old command `python -m unittest discover tests` still works too.
+
+## Later fix: known skills wrongly marked as "learning" (`nlp/skills.py`, `_context`)
+**What:** `_context` now finds the skill names in the sentence first (`skill_spans`). A "learn" word that is part of a
+skill name, such as scikit-**learn** or machine **learning**, is no longer treated as learning intent. This applies
+to both the regex cue check and the spaCy dependency check. New test: `test_learn_inside_skill_names_is_not_learning`.
+**Why:** In the sample resume, the line "AI/ML: Machine Learning, NLP, scikit-learn, pandas, numpy, TensorFlow" put
+pandas, numpy, scikit-learn and TensorFlow under "Learning (not counted yet)". There were two causes:
+1. spaCy splits "scikit-learn" into `scikit` `-` `learn` and tags `learn` as a verb. pandas and numpy hang under it in
+   the parse tree, so the "governed by learn" rule fired.
+2. The 45-character look-back window cut "Machine Learning" to just "Learning", so the regex rule that ignores
+   "machine learning" could no longer see the word "machine".
+
+**Result:** the sample resume now shows 26 skills instead of 23. Data Scientist rises from 64% to 71%, and pandas is no
+longer a missing must-have. "Currently learning Docker" and "No experience with Java" still work as before.
+Tests: 24 passed.
 
 ## Found but not changed (you chose to leave these)
 - Two signups with the same email at the same moment can hit the database UNIQUE rule and show a 500 error (`web/auth.py`).

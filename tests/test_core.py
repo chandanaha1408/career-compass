@@ -33,6 +33,15 @@ class SkillTests(unittest.TestCase):
         r = extract_skills("Skills: Machine Learning, pandas, numpy")
         self.assertIn("pandas", r["skills"])
 
+    def test_learn_inside_skill_names_is_not_learning(self):
+        # "scikit-learn" and a cut-off "Machine Learning" used to mark the whole line as learning
+        r = extract_skills("AI/ML: Machine Learning, NLP, scikit-learn, pandas, numpy, TensorFlow")
+        for s in ("scikit-learn", "pandas", "numpy", "tensorflow"):
+            self.assertIn(s, r["skills"])
+            self.assertNotIn(s, r["learning"])
+        r = extract_skills("Currently learning machine learning with TensorFlow")
+        self.assertIn("tensorflow", r["learning"])
+
     def test_semester_not_sem(self):
         self.assertNotIn("sem", dictionary_skills("Sem 5 results"))
 

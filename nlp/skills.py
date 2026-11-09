@@ -52,8 +52,15 @@ def category_of(skill):
 
 def _context(sentence, start):
     """Classify the mention at char offset `start`: 'has', 'learning' or 'negated'."""
-    before = sentence[max(0, start - 45):start]
-    if LEARNING_CUES.search(before):
+    # "learn" inside a skill name (scikit-learn, machine learning) is not learning intent
+    spans = skill_spans(sentence)
+
+    def in_skill(pos):
+        return any(a <= pos < b for a, b, _ in spans)
+
+    offset = max(0, start - 45)
+    before = sentence[offset:start]
+    if any(not in_skill(offset + m.end() - 1) for m in LEARNING_CUES.finditer(before) if m.group().strip()):
         return "learning"
     neg = NEGATION_CUES.search(before)
     if neg and neg.end() >= len(before) - 25:
@@ -64,7 +71,7 @@ def _context(sentence, start):
         for tok in doc:
             if tok.idx <= start < tok.idx + len(tok.text) + 1:
                 for anc in tok.ancestors:
-                    if anc.lemma_.lower() in LEARN_LEMMAS:
+                    if anc.lemma_.lower() in LEARN_LEMMAS and not in_skill(anc.idx):
                         return "learning"
                     if any(c.dep_ == "neg" for c in anc.children):
                         return "negated"
